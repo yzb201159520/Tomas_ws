@@ -9,6 +9,8 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import com.tomas.web.controller.HomeController;
+
 /**
  * SpringMVC的config
  * 主要用于处理handlerMapping和viewResolver
@@ -18,7 +20,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  */
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages={"com.tomas.web.action"})
+@ComponentScan(basePackageClasses={HomeController.class})
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 	
 	@Bean
