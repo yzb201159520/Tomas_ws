@@ -1,5 +1,9 @@
 package com.tomas.test;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 import org.junit.Test;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -7,6 +11,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import com.tomas.web.controller.HomeController;
+import com.tomas.web.instance.Spittle;
 
 public class HomeControllerTest {
 	
@@ -20,6 +25,8 @@ public class HomeControllerTest {
 		// 创建模拟
 		MockMvc mockMvc = MockMvcBuilders.standaloneSetup(homeController).build();
 		mockMvc.perform(MockMvcRequestBuilders.get("/")).andExpect(MockMvcResultMatchers.view().name("home"));
+		
 		System.out.println("测试通过");
 	}
+	
 }
