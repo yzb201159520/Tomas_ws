@@ -14,7 +14,26 @@
 	</head>
 	<body>
 		<div class="firstDiv">
-			WelCome My Spring Page
+			<table>
+				<tr>
+					<th>
+						Message
+					</th>
+					<th>
+						Time
+					</th>
+				</tr>
+				<c:forEach items="${spittleList}" var="spittle">
+				<tr>
+					<td>
+						${spittle.message}
+					</td>
+					<td>
+						${spittle.dateTime}
+					</td>
+				</tr>
+				</c:forEach>
+			</table>
 		</div>
 	</body>
 </html>

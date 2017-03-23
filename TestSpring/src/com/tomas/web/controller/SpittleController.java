@@ -2,6 +2,7 @@ package com.tomas.web.controller;
 
 import javax.websocket.server.PathParam;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,6 +21,7 @@ import com.tomas.web.repo.SpittleRepository;
 @RequestMapping(value={"/spittle"})
 public class SpittleController {
 	
+	@Autowired
 	private SpittleRepository spittleRepository;
 	
 	@RequestMapping(method=RequestMethod.GET)
@@ -31,28 +33,28 @@ public class SpittleController {
 	@RequestMapping(value={"/param"},method=RequestMethod.GET)
 	public String spittlesParam(@RequestParam(value="inputId",defaultValue="10000")int showId,Model model){
 		System.out.println("showId:  "+showId);
-//		model.addAttribute(spittleRepository.findSpittles(Long.MAX_VALUE, 20));
+		model.addAttribute(spittleRepository.findSpittles(Long.MAX_VALUE, 20));
 		return "spittle";
 	}
 	
 	@RequestMapping(value={"/param2"},method=RequestMethod.GET)
 	public String spittlesParam2(@RequestParam(defaultValue="10000")int showId,Model model){
 		System.out.println("showId:  "+showId);
-//		model.addAttribute(spittleRepository.findSpittles(Long.MAX_VALUE, 20));
+		model.addAttribute(spittleRepository.findSpittles(Long.MAX_VALUE, 20));
 		return "spittle";
 	}
 	
 	@RequestMapping(value={"/pathParam/{ppParam}"},method=RequestMethod.GET)
 	public String spittlesPathParam(@PathVariable(value="ppParam")int showId,Model model){
 		System.out.println("showId:  "+showId);
-//		model.addAttribute(spittleRepository.findSpittles(Long.MAX_VALUE, 20));
+		model.addAttribute(spittleRepository.findSpittles(Long.MAX_VALUE, 20));
 		return "spittle";
 	}
 	
 	@RequestMapping(value={"/pathParam2/{showId}"},method=RequestMethod.GET)
 	public String spittlesPathParam2(@PathVariable int showId,Model model){
 		System.out.println("showId:  "+showId);
-//		model.addAttribute(spittleRepository.findSpittles(Long.MAX_VALUE, 20));
+		model.addAttribute(spittleRepository.findSpittles(Long.MAX_VALUE, 20));
 		return "spittle";
 	}
 	
