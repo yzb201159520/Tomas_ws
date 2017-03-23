@@ -3,11 +3,14 @@ package config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import org.thymeleaf.templateresolver.ITemplateResolver;
+import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 
 import com.tomas.web.controller.HomeController;
 
@@ -21,8 +24,13 @@ import com.tomas.web.controller.HomeController;
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackageClasses={HomeController.class})
+@ImportResource(value={"classpath:config/SpringMVC.xml"})
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 	
+	/**
+	 * JSP的视图解析器
+	 * @return
+	 */
 	@Bean
 	public ViewResolver viewResolver(){
 		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
@@ -30,6 +38,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 		viewResolver.setSuffix(".jsp");
 		// 这句话是设置可以将ApplicationContext中的Bean放在Request或者Session中的attribute中？
 		viewResolver.setExposeContextBeansAsAttributes(true);
+		viewResolver.setOrder(1);
 		return viewResolver;
 	}
 	
