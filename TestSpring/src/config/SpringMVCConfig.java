@@ -24,8 +24,8 @@ import com.tomas.web.controller.HomeController;
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackageClasses={HomeController.class})
-@ImportResource(value={"classpath:config/SpringMVC.xml"})
-public class WebMvcConfig extends WebMvcConfigurerAdapter {
+@ImportResource(value={"classpath:config/SpringMVCconfig.xml"})
+public class SpringMVCConfig extends WebMvcConfigurerAdapter {
 	
 	/**
 	 * JSP的视图解析器
@@ -42,6 +42,9 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 		return viewResolver;
 	}
 	
+	/**
+	 * 配置视图解析
+	 */
 	@Override
 	public void configureDefaultServletHandling(
 			DefaultServletHandlerConfigurer configurer) {

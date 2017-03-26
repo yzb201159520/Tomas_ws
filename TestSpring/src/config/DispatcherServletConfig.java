@@ -7,16 +7,16 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
  * @author thomas
  *
  */
-public class SpringWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class DispatcherServletConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		return new Class<?>[]{RootConfig.class};
+		return new Class<?>[]{SpringContextConfig.class};
 	}
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		return new Class<?>[]{WebMvcConfig.class};
+		return new Class<?>[]{SpringMVCConfig.class};
 	}
 
 	@Override

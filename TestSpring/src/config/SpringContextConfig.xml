@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xsi:schemaLocation=
+		"http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-4.0.xsd"> 
+<!-- configuration details go here -->
+	<!-- 先注掉吧Thymeleaf这个东西比较大，还玩不转 
+	<bean id="templateResolver" class="org.thymeleaf.templateresolver.ServletContextTemplateResolver"
+		p:prefix="/WEB-INF/templates/"
+		p:suffix=".html"
+		p:templateMode="HTML5" />
+	<bean id="templateEngine" class="org.thymeleaf.spring3.SpringTemplateEngine"
+		p:templateResolver-ref="templateResolver" />
+	<bean id="viewResolver" class="org.thymeleaf.spring3.view.ThymeleafViewResolver"
+		p:templateEngine-ref="templateEngine" /> -->
+	<context:property-placeholder location="classpath:config/jdbc/jdbc.properties"/>
+	
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${jdbc.driverClassName}"/>
+		<property name="url" value="${jdbc.url}"/>
+		<property name="username" value="${jdbc.username}"/>
+		<property name="password" value="${jdbc.password}"/>
+	</bean>
+	
+</beans>
