@@ -16,5 +16,29 @@
 		<div class="firstDiv">
 			WelCome My Spring Page
 		</div>
+		<table>
+			<tr>
+				<th>id</th>
+				<th>username</th>
+				<th>password</th>
+				<th>email</th>
+			</tr>
+			<c:forEach items="${users}" var="user">
+				<tr>
+					<td>
+						${user.id }
+					</td>				
+					<td>
+						${user.username }
+					</td>				
+					<td>
+						${user.password }
+					</td>				
+					<td>
+						${user.email }
+					</td>				
+				</tr>
+			</c:forEach>
+		</table>
 	</body>
 </html>

@@ -17,7 +17,16 @@
 		p:templateResolver-ref="templateResolver" />
 	<bean id="viewResolver" class="org.thymeleaf.spring3.view.ThymeleafViewResolver"
 		p:templateEngine-ref="templateEngine" /> -->
-	<context:property-placeholder location="classpath:config/jdbc/jdbc.properties"/>
+	
+	<!-- 配置可以扫描多个property文件的 placeHolder -->
+	<bean id="propertyPlaceHolder" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="fileEncoding" value="UTF-8"/>
+		<property name="locations">
+			<list>
+				<value>classpath:config/jdbc/jdbc.properties</value>
+			</list>
+		</property>
+	</bean>
 	
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="${jdbc.driverClassName}"/>
@@ -26,4 +35,21 @@
 		<property name="password" value="${jdbc.password}"/>
 	</bean>
 	
+	<!-- sqlSessionFactory -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<!-- mapperLocations配置要扫描的文件位置 -->
+		<property name="mapperLocations" value="classpath:com/tomas/web/dao/mapper/*.xml" />
+		<property name="configLocation" value="classpath:config/jdbc/mybatis-config.xml"></property>
+	</bean>
+	<!-- 配置 接口和mapper的映射关系  它是自动扫描的 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+	    <!-- 配置要扫描的 接口的位置 -->
+		<property name="basePackage" value="com.tomas.web.dao"></property>
+		<!-- 注意这里一定要用sqlSessionFactoryBeanName而不是sqlSessionFactory 使用后者的话，会在初始化dataSource的时候无法读取到placeHolder的值
+			原因：由于MyBatis的接口与mapper.xml的映射关系是需要动态代理生成代理类然后才能被Spring的容器扫描的，这些步骤会走在Spring容器初始化完成前。
+				所以此时DataSource中的${}还未被解析到。需要beanName属性，然其初始化完成后再去根据name获取SqlSessionFactory
+		 -->
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+	</bean>
 </beans>
