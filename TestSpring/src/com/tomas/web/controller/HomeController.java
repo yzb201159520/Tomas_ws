@@ -2,6 +2,7 @@ package com.tomas.web.controller;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,13 +21,14 @@ import com.tomas.web.instance.Users;
 @Controller
 @RequestMapping(value={"/","/home"})
 public class HomeController {
-	
+	private Logger log = Logger.getLogger(HomeController.class);
 	@Autowired
 	private UsersDAO usersDAO;
 	
 	@RequestMapping(value="/topath/{param}",method=RequestMethod.GET)
 	public String home(@PathVariable int param,Model model){
 		System.out.println("HomeController.home()");
+		log.info("HomeController.home()");
 		List<Users> users = usersDAO.findAll(); 
 		model.addAttribute("users", users);
 		return "home";

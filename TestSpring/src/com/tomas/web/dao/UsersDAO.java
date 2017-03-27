@@ -5,7 +5,12 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 import com.tomas.web.instance.Users;
-
+/*
+ * 采用动态代理的设计思想 面向接口编程
+ * 设计出 接口UsersDAO 和其对应的 Mapping文件(在文件的namespace属性 为 UsersDAO的文件目录)
+ * 在 接口和Mapping文件中添加 相对于的方法,Spring的配置文件进行关联
+ * 在程序执行的时候 会根据 配置文件 动态的生成UserDAO接口的代理类 并调用相关的方法(动态代理,已经添加的@Respostory注解)
+ */
 public interface UsersDAO {
 
 	List<Users> findAll();
