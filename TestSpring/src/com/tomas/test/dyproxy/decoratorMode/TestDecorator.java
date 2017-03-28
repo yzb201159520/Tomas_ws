@@ -7,6 +7,7 @@ public class TestDecorator {
 		// 第一次装饰
 		Student decoStu = new MakeBeauityStudent(student);
 		decoStu.beauityStudent();
+		
 		System.out.println("");
 		// 第二次装饰
 		Student deDecoStu = new MakeBeauityStudent(decoStu);

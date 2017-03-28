@@ -2,9 +2,9 @@ package com.tomas.test.dyproxy.staticProxy;
 
 public class AProxyTeacher implements Teacher {
 	
-	private TeacherImpl teacherImpl;
+	private Teacher teacherImpl;
 	
-	public AProxyTeacher(TeacherImpl teacherImpl) {
+	public AProxyTeacher(Teacher teacherImpl) {
 		this.teacherImpl = teacherImpl;
 	}
 

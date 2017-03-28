@@ -16,5 +16,12 @@ public class TestInterfaceProxy {
 		System.out.println("------------proxySubject.doSomething------------");
 		proxySubject.doSomething();
 		System.out.println("------------执行完成------------");
+		
+		// 这个就证明了 动态代理也是可以重复代理的。
+		Subject proxySubject2 = (Subject) Proxy.newProxyInstance(Subject.class.getClassLoader(), new Class<?>[]{Subject.class}, new SubjectProxyHandler(proxySubject));
+		System.out.println("");		
+		System.out.println("------------proxySubject2.doSomething------------");
+		proxySubject2.doSomething();
+		System.out.println("------------执行完成------------");
 	}
 }
