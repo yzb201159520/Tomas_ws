@@ -4,9 +4,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 /**
- * 代理的真实处理类
- * @author thomas
- *
+ * 代理的处理类
  */
 public class SubjectProxyHandler implements InvocationHandler {
 	
@@ -18,7 +16,8 @@ public class SubjectProxyHandler implements InvocationHandler {
 	public SubjectProxyHandler(Object proxied) {
 		this.proxied = proxied;
 	}
-
+	
+	// 我们只需要关注对于真是对象的方法调用环节
 	@Override
 	public Object invoke(Object proxyObj, Method method, Object[] args)
 			throws Throwable {
@@ -31,5 +30,4 @@ public class SubjectProxyHandler implements InvocationHandler {
 		//在之后可以做的事情
 		return obj;
 	}
-
 }
