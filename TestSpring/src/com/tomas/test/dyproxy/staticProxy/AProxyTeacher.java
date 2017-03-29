@@ -28,5 +28,4 @@ public class AProxyTeacher implements Teacher {
 		teacherImpl.techStu();
 		System.out.println("------AProxyTeacher.techStu().finished------");
 	}
-
 }

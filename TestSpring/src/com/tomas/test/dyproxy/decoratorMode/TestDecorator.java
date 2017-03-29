@@ -12,6 +12,5 @@ public class TestDecorator {
 		// 第二次装饰
 		Student deDecoStu = new MakeBeauityStudent(decoStu);
 		deDecoStu.beauityStudent();
-		
 	}
 }

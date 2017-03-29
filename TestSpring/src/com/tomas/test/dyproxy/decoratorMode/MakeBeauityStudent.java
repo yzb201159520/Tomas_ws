@@ -21,5 +21,4 @@ public class MakeBeauityStudent implements Student{
 		stuToBeDecorate.beauityStudent();
 		System.out.println("------MakeBeauityStudent.beauityStudent().finish------");
 	}
-	
 }
