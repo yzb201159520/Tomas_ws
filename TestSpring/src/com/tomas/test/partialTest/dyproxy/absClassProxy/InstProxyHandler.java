@@ -1,4 +1,4 @@
-package com.tomas.test.dyproxy.absClassProxy;
+package com.tomas.test.partialTest.dyproxy.absClassProxy;
 
 import java.lang.reflect.Method;
 

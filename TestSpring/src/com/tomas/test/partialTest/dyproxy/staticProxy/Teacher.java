@@ -1,4 +1,4 @@
-package com.tomas.test.dyproxy.staticProxy;
+package com.tomas.test.partialTest.dyproxy.staticProxy;
 
 /**
  * 被代理的接口

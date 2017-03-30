@@ -1,4 +1,4 @@
-package com.tomas.test.dyproxy.interfaceProxy;
+package com.tomas.test.partialTest.dyproxy.interfaceProxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

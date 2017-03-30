@@ -1,4 +1,4 @@
-package com.tomas.test.dyproxy.staticProxy;
+package com.tomas.test.partialTest.dyproxy.staticProxy;
 
 public class TestStaticProxy {
 	

@@ -1,4 +1,4 @@
-package com.tomas.test.dyproxy.decoratorMode;
+package com.tomas.test.partialTest.dyproxy.decoratorMode;
 
 /**
  * 装饰类
