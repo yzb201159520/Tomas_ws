@@ -1,0 +1,42 @@
+2017-07-11 23:30:49 - [INFO] [ContextLoader] - Root WebApplicationContext: initialization started
+2017-07-11 23:30:49 - [INFO] [AbstractApplicationContext] - Refreshing Root WebApplicationContext: startup date [Tue Jul 11 23:30:49 CST 2017]; root of context hierarchy
+2017-07-11 23:30:49 - [INFO] [AnnotationConfigWebApplicationContext] - Registering annotated classes: [class config.SpringContextConfig]
+2017-07-11 23:30:50 - [INFO] [XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [config/SpringContextConfig.xml]
+2017-07-11 23:30:50 - [INFO] [PropertiesLoaderSupport] - Loading properties file from class path resource [config/jdbc/jdbc.properties]
+2017-07-11 23:30:50 - [INFO] [DriverManagerDataSource] - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-07-11 23:30:51 - [INFO] [ContextLoader] - Root WebApplicationContext: initialization completed in 1262 ms
+2017-07-11 23:30:51 - [INFO] [FrameworkServlet] - FrameworkServlet 'dispatcher': initialization started
+2017-07-11 23:30:51 - [INFO] [AbstractApplicationContext] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Jul 11 23:30:51 CST 2017]; parent: Root WebApplicationContext
+2017-07-11 23:30:51 - [INFO] [AnnotationConfigWebApplicationContext] - Registering annotated classes: [class config.SpringMVCConfig]
+2017-07-11 23:30:51 - [INFO] [XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [config/SpringMVCconfig.xml]
+2017-07-11 23:30:51 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//topath/{param} || /home/topath/{param}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.home(int,org.springframework.ui.Model)
+2017-07-11 23:30:51 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle/pathParam/{ppParam}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittlesPathParam(int,org.springframework.ui.Model)
+2017-07-11 23:30:51 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle/pathParam2/{showId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittlesPathParam2(int,org.springframework.ui.Model)
+2017-07-11 23:30:51 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle/param],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittlesParam(int,org.springframework.ui.Model)
+2017-07-11 23:30:51 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittles(org.springframework.ui.Model)
+2017-07-11 23:30:51 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle/param2],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittlesParam2(int,org.springframework.ui.Model)
+2017-07-11 23:30:51 - [INFO] [AbstractUrlHandlerMapping] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler]
+2017-07-11 23:30:51 - [INFO] [FrameworkServlet] - FrameworkServlet 'dispatcher': initialization completed in 604 ms
+2017-07-11 23:35:46 - [INFO] [AbstractApplicationContext] - Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Jul 11 23:30:51 CST 2017]; parent: Root WebApplicationContext
+2017-07-11 23:35:46 - [INFO] [AbstractApplicationContext] - Closing Root WebApplicationContext: startup date [Tue Jul 11 23:30:49 CST 2017]; root of context hierarchy
+2017-07-11 23:36:02 - [INFO] [ContextLoader] - Root WebApplicationContext: initialization started
+2017-07-11 23:36:03 - [INFO] [AbstractApplicationContext] - Refreshing Root WebApplicationContext: startup date [Tue Jul 11 23:36:03 CST 2017]; root of context hierarchy
+2017-07-11 23:36:03 - [INFO] [AnnotationConfigWebApplicationContext] - Registering annotated classes: [class config.SpringContextConfig]
+2017-07-11 23:36:03 - [INFO] [XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [config/SpringContextConfig.xml]
+2017-07-11 23:36:03 - [INFO] [PropertiesLoaderSupport] - Loading properties file from class path resource [config/jdbc/jdbc.properties]
+2017-07-11 23:36:04 - [INFO] [DriverManagerDataSource] - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-07-11 23:36:04 - [INFO] [ContextLoader] - Root WebApplicationContext: initialization completed in 1349 ms
+2017-07-11 23:36:04 - [INFO] [FrameworkServlet] - FrameworkServlet 'dispatcher': initialization started
+2017-07-11 23:36:04 - [INFO] [AbstractApplicationContext] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Jul 11 23:36:04 CST 2017]; parent: Root WebApplicationContext
+2017-07-11 23:36:04 - [INFO] [AnnotationConfigWebApplicationContext] - Registering annotated classes: [class config.SpringMVCConfig]
+2017-07-11 23:36:04 - [INFO] [XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [config/SpringMVCconfig.xml]
+2017-07-11 23:36:04 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//topath/{param} || /home/topath/{param}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.home(int,org.springframework.ui.Model)
+2017-07-11 23:36:04 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle/param],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittlesParam(int,org.springframework.ui.Model)
+2017-07-11 23:36:04 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittles(org.springframework.ui.Model)
+2017-07-11 23:36:04 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle/param2],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittlesParam2(int,org.springframework.ui.Model)
+2017-07-11 23:36:04 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle/pathParam/{ppParam}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittlesPathParam(int,org.springframework.ui.Model)
+2017-07-11 23:36:04 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle/pathParam2/{showId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittlesPathParam2(int,org.springframework.ui.Model)
+2017-07-11 23:36:04 - [INFO] [AbstractUrlHandlerMapping] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler]
+2017-07-11 23:36:04 - [INFO] [FrameworkServlet] - FrameworkServlet 'dispatcher': initialization completed in 630 ms
+2017-07-11 23:36:45 - [INFO] [AbstractApplicationContext] - Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Jul 11 23:36:04 CST 2017]; parent: Root WebApplicationContext
+2017-07-11 23:36:45 - [INFO] [AbstractApplicationContext] - Closing Root WebApplicationContext: startup date [Tue Jul 11 23:36:03 CST 2017]; root of context hierarchy
