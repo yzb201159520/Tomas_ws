@@ -19,6 +19,12 @@
           <file>file://$MODULE_DIR$/webapp/WEB-INF/classes/config/SpringMVCconfig.xml</file>
           <file>file://$MODULE_DIR$/webapp/WEB-INF/classes/config/SpringContextConfig.xml</file>
         </fileset>
+        <fileset id="fileset2" name="Spring Application Context (2)" removed="false">
+          <file>file://$MODULE_DIR$/src/config/SpringContextConfig.xml</file>
+          <file>file://$MODULE_DIR$/src/config/SpringMVCconfig.xml</file>
+          <file>file://$MODULE_DIR$/src/config/SpringContextConfig.java</file>
+          <file>file://$MODULE_DIR$/src/config/SpringMVCConfig.java</file>
+        </fileset>
       </configuration>
     </facet>
   </component>
