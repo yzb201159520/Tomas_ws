@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 在XML中使用bean声明一个javaConfig注解 -->
+    <bean class="testdi.charter2.beans.SchoolConfig"/>
+    <!-- 在XML中使用import导入另一个XMLconfig配置文件 -->
+    <import resource="SchooConfig.xml"/>
+</beans>

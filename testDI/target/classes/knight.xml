@@ -7,7 +7,7 @@
        <bean id="knight" class="com.testdi.bean.BraveKnight">
               <constructor-arg ref="quest"/>
        </bean>
-       <bean id="quest" class="com.testdi.bean.SlayDragonQuest">
+       <bean id="quest" class="com.testdi.bean.SlayDragonQuest" init-method="embark" destroy-method="embark">
               <constructor-arg value="#{T(System).out}"/>
        </bean>
 </beans>

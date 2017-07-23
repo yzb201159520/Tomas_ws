@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+       <bean id="students1" class="testdi.charter2.beans.Students">
+              <constructor-arg value="stuName"/>
+              <constructor-arg value="stuGrade"/>
+              <constructor-arg value="stuNum"/>
+              <constructor-arg>
+                  <list>
+                      <value>lesson1</value>
+                      <value>lesson2</value>
+                      <value>lesson3</value>
+                      <value>lesson4</value>
+                      <value>lesson5</value>
+                  </list>
+              </constructor-arg>
+       </bean>
+       <bean id="students2" class="testdi.charter2.beans.Students" c:name="stuNameUse_c" c:grade="stuGradeUse_c" c:stuNum="stuNumUse_c" c:lessons-ref="stu2List">
+           <!-- 关于集合也可以使用 c:name-ref的形式引入，但是觉得不方便
+           <constructor-arg name="lessons">
+               <list>
+
+               </list>
+           </constructor-arg> -->
+       </bean>
+        <util:list id="stu2List">
+            <value>lessionStu2Lesson1</value>
+            <value>lessionStu2Lesson2</value>
+            <value>lessionStu2Lesson3</value>
+            <value>lessionStu2Lesson4</value>
+        </util:list>
+
+       <bean id="students3" class="testdi.charter2.beans.Students">
+            <property name="name" value="stuName3"/>
+            <property name="grade" value="stugrade3"/>
+            <property name="stuNum" value="stuNum3"/>
+            <property name="lessons">
+                <list>
+                    <!--<ref bean="students1"/>-->
+                    <value>stu3lesson1</value>
+                    <value>stu3lesson2</value>
+                    <value>stu3lesson3</value>
+                    <value>stu3lesson4</value>
+                </list>
+            </property>
+       </bean>
+
+        <bean id="students4" class="testdi.charter2.beans.Students" p:name="stu4Name" p:lessons="stu4Lesson" p:grade="stu4Grade"/>
+</beans>
