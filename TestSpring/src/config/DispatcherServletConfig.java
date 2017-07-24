@@ -2,6 +2,8 @@ package config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import javax.servlet.ServletContext;
+
 /**
  * 利用Servlet3.0的新特性，只需继承Servlet即可配置自定义的DispatcherServlet
  * @author thomas
@@ -23,5 +25,4 @@ public class DispatcherServletConfig extends AbstractAnnotationConfigDispatcherS
 	protected String[] getServletMappings() {
 		return new String[]{"/"};
 	}
-
 }
