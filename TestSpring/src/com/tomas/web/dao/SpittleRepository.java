@@ -1,4 +1,4 @@
-package com.tomas.web.repo;
+package com.tomas.web.dao;
 
 import java.util.ArrayList;
 import java.util.Date;

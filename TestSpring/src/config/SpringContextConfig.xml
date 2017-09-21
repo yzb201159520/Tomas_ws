@@ -26,4 +26,17 @@
 		<property name="password" value="${jdbc.password}"/>
 	</bean>
 	
+	<!-- 整合MyBatis -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<!-- <property name="configLocation" value="classpath:config/jdbc/mybatis-config.xml" /> -->
+		<property name="mapperLocations" value="classpath:com/tomas/web/dao/mapper/*.xml"/>
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+	<!-- 配置MyBatis的接口映射 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="classpath:com.tomas.web.dao.*"/>
+		<!-- 这其中有几个属性sqlSessionFactoryBeanName(name)与sqlSessionFactory(实体) 与上面的配置保持一致-->
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+	</bean>
 </beans>

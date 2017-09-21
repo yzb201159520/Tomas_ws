@@ -1,0 +1,2 @@
+ALTER TABLE `tb_userbaseinfo`
+MODIFY COLUMN `id`  int(11) NOT NULL AUTO_INCREMENT COMMENT 'Ö÷¼üid' FIRST ;

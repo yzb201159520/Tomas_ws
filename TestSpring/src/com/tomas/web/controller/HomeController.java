@@ -1,11 +1,11 @@
 package com.tomas.web.controller;
 
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.tomas.web.dao.UserDao;
 
 /**
  * 主页面的controller
@@ -17,11 +17,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
 	
 	@Autowired
-	private DataSource dataSource;
+	private UserDao userDao;
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public String home(){
-		System.out.println(dataSource);
+		System.out.println(userDao);
+		System.out.println(userDao.showUsers());
 		return "home";
 	}
 }

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.tomas.web.repo.SpittleRepository;
+import com.tomas.web.dao.SpittleRepository;
 
 /**
  * 用于测试 在方法内调用了其他方法已经Model内已经存在值的情况
