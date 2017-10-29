@@ -2,18 +2,18 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.tomas.web.dao.UsersDAO">
-  <select id="findAll" resultType="Users">
+<mapper namespace="com.tomas.web.dao.itrface.UsersDAO">
+  <select id="findAll" resultType="users">
 		select * from users
 	</select>
-	<select id="findById" parameterType="int" resultType="Users">
+	<select id="findById" parameterType="int" resultType="users">
 		select * from users u where u.id=#{id}
 	</select>
 	
 	<!-- 多个参数的时候  需要用  下标参数   从0开始 自定义类型名后 可以通过类型名调用 可以混用	
 		如果不知道类型 可以不用传
 	-->
-	<select id="findInfo" resultType="Users">
+	<select id="findInfo" resultType="users">
 		select * from users u where u.username=#{0} and u.password=#{password}
 	</select>
 </mapper>

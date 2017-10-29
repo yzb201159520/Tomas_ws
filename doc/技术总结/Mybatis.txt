@@ -1,0 +1,5 @@
+MyBatis小作文：
+
+
+1.MyBatis的缓存机制(开关)？
+MyBatis分为一级缓存和二级缓存，其中一级缓存为SqlSession

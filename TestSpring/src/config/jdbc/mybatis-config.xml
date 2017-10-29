@@ -3,5 +3,6 @@
 <configuration>
 	<typeAliases>
 		<typeAlias type="com.tomas.web.instance.UserBaseInfo" alias="UserBaseInfo"></typeAlias>
+		<typeAlias type="com.tomas.web.instance.Users" alias="Users"/>
 	</typeAliases>
 </configuration>

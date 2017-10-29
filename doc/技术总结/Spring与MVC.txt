@@ -1,0 +1,12 @@
+Spring小作文
+
+SpringMVC小作文
+
+提问总结：
+3.Spring的机制，IOC和AOP，事务的声明，乐观锁悲观锁，脏数据。
+4.SpringMVC的一个请求的过程，Filter和InterCepter拦截器的区别。
+
+5.Java注解发现Configuration配置的原理/XML配置
+答：【Java注解】是Servlet3.0的新特性，只需继承类AbstactAnnotationConfigDispatcherServletInitializer,指定Spring的config和SpringMVC的config,就会对Spring进行初始化。它的原理是在Servlet3.0环境中，在servlet容器加载时，会查找ServletContainerInitializer的实现类，如果找到，则用该类配置servlet容器。Spring提供了该接口的实现SpringServletContainerInitializer,这个类又会去查找WebApplicationInitializer的实现类并将初始化任务交给他们，而Spring3.2引入的AbstactAnnotationConfigDispatcherServletInitializer则提供了该接口的基础实现，因此只需要我们继承该抽象类，在servlet容器加载的时候就会发现我们的继承类，并用它的配置来初始化servlet.
+【XML配置】
+在DispatcherServlet配置中指定SpringMVC的配置，添加listener监听器，监听程序初始化时的事件并加载SpringContext配置

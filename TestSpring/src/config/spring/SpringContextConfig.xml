@@ -31,11 +31,15 @@
 		<!-- <property name="configLocation" value="classpath:config/jdbc/mybatis-config.xml" /> -->
 		<property name="mapperLocations" value="classpath:com/tomas/web/dao/mapper/*.xml"/>
 		<property name="dataSource" ref="dataSource"/>
+		<property name="typeAliasesPackage" value="com.tomas.web.instance"/>
+		<property name="typeHandlersPackage" value="com.tomas.web.dao.typehandlers"/>
 	</bean>
 	
 	<!-- 配置MyBatis的接口映射 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="classpath:com.tomas.web.dao.*"/>
+		<!-- 注意这里如果指定basePackage可以让scanner在指定目录下进行扫描，并将扫描到的接口动态的组装为SpringBean -->
+		<!-- 将扫描到的接口通过MapperFactoryBean转化为对应接口实现的SpringBean -->
+		<property name="basePackage" value="com.tomas.web.dao.itrface"/>
 		<!-- 这其中有几个属性sqlSessionFactoryBeanName(name)与sqlSessionFactory(实体) 与上面的配置保持一致-->
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
 	</bean>

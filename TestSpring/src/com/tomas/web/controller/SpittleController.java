@@ -21,7 +21,6 @@ public class SpittleController {
 	
 	@Autowired
 	private SpittleRepository spittleRepository;
-	
 	@RequestMapping(method=RequestMethod.GET)
 	public String spittles(Model model){
 		model.addAttribute(spittleRepository.findSpittles(Long.MAX_VALUE, 20));

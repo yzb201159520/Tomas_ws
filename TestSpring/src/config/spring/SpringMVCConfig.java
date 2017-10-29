@@ -1,4 +1,4 @@
-package config;
+package config.spring;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -22,7 +22,7 @@ import com.tomas.web.controller.HomeController;
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackageClasses={HomeController.class})
-@ImportResource(value={"classpath:config/SpringMVCconfig.xml"})
+@ImportResource(value={"classpath:config/spring/SpringMVCconfig.xml"})
 public class SpringMVCConfig extends WebMvcConfigurerAdapter {
 	
 	/**
