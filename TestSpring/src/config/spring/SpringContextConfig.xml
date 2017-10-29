@@ -28,11 +28,11 @@
 	
 	<!-- 整合MyBatis -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<!-- <property name="configLocation" value="classpath:config/jdbc/mybatis-config.xml" /> -->
 		<property name="mapperLocations" value="classpath:com/tomas/web/dao/mapper/*.xml"/>
 		<property name="dataSource" ref="dataSource"/>
 		<property name="typeAliasesPackage" value="com.tomas.web.instance"/>
 		<property name="typeHandlersPackage" value="com.tomas.web.dao.typehandlers"/>
+		<property name="configLocation" value="classpath:config/jdbc/mybatis-config.xml" />
 	</bean>
 	
 	<!-- 配置MyBatis的接口映射 -->
