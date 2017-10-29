@@ -8,9 +8,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.tomas.web.dao.itrface.CountryDAO;
+import com.tomas.web.dao.itrface.TeacherDAO;
 import com.tomas.web.dao.itrface.UsersDAO;
 import com.tomas.web.instance.Address;
 import com.tomas.web.instance.Country;
+import com.tomas.web.instance.Teacher;
 
 /**
  * 主页面的controller
@@ -26,6 +28,17 @@ public class HomeController {
 	
 	@Autowired
 	private CountryDAO countryDAO;
+	
+	@Autowired
+	private TeacherDAO teacherDAO;
+	
+	@RequestMapping(value="/testTeacher",method=RequestMethod.GET)
+	public String testTeacher()
+	{
+		System.out.println(teacherDAO);
+		System.out.println(teacherDAO.queryTeacherById(1));
+		return "home";
+	}
 	
 	@RequestMapping(value="/123",method=RequestMethod.GET)
 	public String home(){

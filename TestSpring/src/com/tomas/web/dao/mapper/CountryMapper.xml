@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tomas.web.dao.itrface.CountryDAO">
-  <select id="findAll" resultType="country">
+  	<select id="findAll" resultType="country">
 		select * from tb_country;
 	</select>
 	<select id="getById" parameterType="int" resultType="country">
@@ -13,7 +13,6 @@
 	<insert id="insert" parameterType="country" useGeneratedKeys="true" keyProperty="id">
 		insert into tb_country(name,location,totalPeopleNum,createTime,localAddress) values(#{name},#{location},#{totalPeopleNum},#{createTime},#{localAddress});
 	</insert>
-	
 	<!-- 多个参数的时候  需要用  下标参数   从0开始 自定义类型名后 可以通过类型名调用 可以混用	
 		如果不知道类型 可以不用传
 	-->
