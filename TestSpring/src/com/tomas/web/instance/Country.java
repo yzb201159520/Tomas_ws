@@ -1,8 +1,9 @@
 package com.tomas.web.instance;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Country {
+public class Country implements Serializable{
 	int id;
 	String name;
 	String location;

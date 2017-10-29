@@ -36,7 +36,13 @@ public class HomeController {
 	public String testTeacher()
 	{
 		System.out.println(teacherDAO);
+		Date date1 = new Date();
 		System.out.println(teacherDAO.queryTeacherById(1));
+		Date date2 = new Date();
+		System.out.println("第一次查询耗时:"+(date2.getTime()-date1.getTime()));
+		System.out.println(teacherDAO.queryTeacherById(1));
+		Date date3 = new Date();
+		System.out.println("第二次查询耗时:"+(date3.getTime()-date2.getTime()));
 		return "home";
 	}
 	
@@ -65,6 +71,22 @@ public class HomeController {
 		country.setName("sdgdhfgjf");
 		country.setTotalPeopleNum(897);
 		countryDAO.insert(country);
+		return "home";
+	}
+
+	@RequestMapping(value="/12333",method=RequestMethod.GET)
+	public String home3(){
+		System.out.println("123");
+		Date date1 = new Date();
+		System.out.println(countryDAO.getById(1));
+		Date date2 = new Date();
+		System.out.println("第一次查询耗时:"+(date2.getTime()-date1.getTime()));
+		System.out.println(countryDAO.getById(2));
+		System.out.println("查询了依次id=2,再次查询id=1;");
+		Date date21 = new Date();
+		System.out.println(countryDAO.getById(1));
+		Date date3 = new Date();
+		System.out.println("第二次查询耗时:"+(date3.getTime()-date21.getTime()));
 		return "home";
 	}
 }

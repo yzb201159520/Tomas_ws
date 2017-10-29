@@ -3,7 +3,9 @@ package com.tomas.web.instance;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-public class Address {
+import java.io.Serializable;
+
+public class Address implements Serializable{
 	String eastdis;
 	String northdis;
 	String higher;
