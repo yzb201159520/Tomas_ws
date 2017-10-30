@@ -26,4 +26,6 @@ public interface UsersDAO {
 	 * @return
 	 */
 	List<Users> findInfo(String username,@Param("password") String password);
+
+	void insertAll(List<Users> userses);
 }

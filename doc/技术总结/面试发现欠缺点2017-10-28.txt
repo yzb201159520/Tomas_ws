@@ -1,4 +1,4 @@
-1.对哪块最熟悉，最了解。
+1.对哪块最熟悉，最了解。(MyBatis,Hadoop,Spring)
 2.MyBatis的机制(使用方式),resultMap，详细描述，包括TypeAlias/TypeHandlers,缓存(开关)，批量插入，动态代理机制。
 
 2.1.动态代理机制

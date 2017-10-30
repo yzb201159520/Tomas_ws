@@ -1,7 +1,10 @@
 package com.tomas.web.controller;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
+import com.tomas.web.instance.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -87,6 +90,28 @@ public class HomeController {
 		System.out.println(countryDAO.getById(1));
 		Date date3 = new Date();
 		System.out.println("第二次查询耗时:"+(date3.getTime()-date21.getTime()));
+		return "home";
+	}
+
+	@RequestMapping(value="/1234",method=RequestMethod.GET)
+	public String home4()
+	{
+		System.out.println("123");
+		Date date1 = new Date();
+		System.out.println(usersDao);
+		for(int i=0;i<100;i++)
+		{
+			List<Users> userses = new ArrayList<>();
+			for(int j=0;j<1000;j++)
+			{
+				Users users = new Users();
+				users.setEmail("email"+i+j+"toberemember");
+				users.setPassword("password" + i + j + "word");
+				users.setUsername("username" + i + j + "name");
+				userses.add(users);
+			}
+			usersDao.insertAll(userses);
+		}
 		return "home";
 	}
 }
