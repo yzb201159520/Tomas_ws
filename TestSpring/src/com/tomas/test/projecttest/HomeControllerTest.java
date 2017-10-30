@@ -1,4 +1,4 @@
-package com.tomas.test;
+package com.tomas.test.projecttest;
 
 import java.util.ArrayList;
 import java.util.Date;

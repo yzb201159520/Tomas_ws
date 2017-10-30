@@ -5,7 +5,9 @@ import java.util.Date;
 import java.util.List;
 
 import com.tomas.web.instance.Users;
+import com.tomas.web.utils.ApplicationContextHolder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -112,6 +114,25 @@ public class HomeController {
 			}
 			usersDao.insertAll(userses);
 		}
+		return "home";
+	}
+
+	@RequestMapping(value = "/appCtxt",method = RequestMethod.GET)
+	public String queryAppContext()
+	{
+		HomeController controller = (HomeController)ApplicationContextHolder.getBean("homeController");
+		System.out.println(controller);
+		System.out.println(ApplicationContextHolder.getBean(UsersDAO.class));
+		return "home";
+	}
+
+	@RequestMapping(value = "/testscope",method = RequestMethod.GET)
+	public String testScope()
+	{
+		ApplicationContextHolder.getBean("testScopeBean");
+		ApplicationContextHolder.getBean("testScopeBean");
+		ApplicationContextHolder.getBean("testScopeBean");
+		ApplicationContextHolder.getBean("testScopeBean");
 		return "home";
 	}
 }

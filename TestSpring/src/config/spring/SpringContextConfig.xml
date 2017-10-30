@@ -17,6 +17,9 @@
 		p:templateResolver-ref="templateResolver" />
 	<bean id="viewResolver" class="org.thymeleaf.spring3.view.ThymeleafViewResolver"
 		p:templateEngine-ref="templateEngine" /> -->
+	<!-- 获取applicationContext的方法，声明在Spring的Context中，可获取springMvc的和Spring中的bean -->
+	<bean name="applicationContextHolder" class="com.tomas.web.utils.ApplicationContextHolder"/>
+
 	<context:property-placeholder location="classpath:config/jdbc/jdbc.properties"/>
 	
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
