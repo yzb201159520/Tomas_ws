@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.List;
 
 import com.tomas.web.instance.Users;
+import com.tomas.web.service.HomeService;
+import com.tomas.web.service.UserService;
 import com.tomas.web.utils.ApplicationContextHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
@@ -36,7 +38,13 @@ public class HomeController {
 	
 	@Autowired
 	private TeacherDAO teacherDAO;
-	
+
+	@Autowired
+	private HomeService homeService;
+
+	@Autowired
+	private UserService userService;
+
 	@RequestMapping(value="/testTeacher",method=RequestMethod.GET)
 	public String testTeacher()
 	{
@@ -133,6 +141,22 @@ public class HomeController {
 		ApplicationContextHolder.getBean("testScopeBean");
 		ApplicationContextHolder.getBean("testScopeBean");
 		ApplicationContextHolder.getBean("testScopeBean");
+		return "home";
+	}
+
+	@RequestMapping(value = "/userService")
+	public String testUserService()
+	{
+		System.out.println("testUserService");
+		userService.queryById(2);
+		return "home";
+	}
+
+	@RequestMapping(value = "/homeService")
+	public String testHomeService()
+	{
+		System.out.println("testHomeService");
+		homeService.getHomeUser(111,777);
 		return "home";
 	}
 }

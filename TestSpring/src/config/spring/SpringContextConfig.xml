@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xmlns:context="http://www.springframework.org/schema/context" 
-	xsi:schemaLocation=
-		"http://www.springframework.org/schema/beans 
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:aop="http://www.springframework.org/schema/tx" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation=
+               "http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
 		http://www.springframework.org/schema/context
-		http://www.springframework.org/schema/context/spring-context-4.0.xsd"> 
+		http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
 <!-- configuration details go here -->
-	<!-- 先注掉吧Thymeleaf这个东西比较大，还玩不转 
+	<!-- 先注掉吧Thymeleaf这个东西比较大，还玩不转
 	<bean id="templateResolver" class="org.thymeleaf.templateresolver.ServletContextTemplateResolver"
 		p:prefix="/WEB-INF/templates/"
 		p:suffix=".html"
@@ -18,7 +24,17 @@
 	<bean id="viewResolver" class="org.thymeleaf.spring3.view.ThymeleafViewResolver"
 		p:templateEngine-ref="templateEngine" /> -->
 	<!-- 获取applicationContext的方法，声明在Spring的Context中，可获取springMvc的和Spring中的bean -->
-	<bean name="applicationContextHolder" class="com.tomas.web.utils.ApplicationContextHolder"/>
+
+    <!-- 启用aspectj的自动代理，可在java中配置 -->
+    <!--<aop:aspectj-autoproxy/>-->
+
+    <!-- 声明式事务 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <bean name="applicationContextHolder" class="com.tomas.web.utils.ApplicationContextHolder"/>
 
 	<context:property-placeholder location="classpath:config/jdbc/jdbc.properties"/>
 	

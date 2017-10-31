@@ -563,3 +563,166 @@ Caused by: java.lang.NoSuchMethodException: org.apache.ibatis.cache.decorators.L
 2017-10-30 22:11:12 - [INFO] [FrameworkServlet] - FrameworkServlet 'dispatcher': initialization completed in 947 ms
 2017-10-30 22:12:34 - [INFO] [AbstractApplicationContext] - Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Oct 30 22:11:11 CST 2017]; parent: Root WebApplicationContext
 2017-10-30 22:12:34 - [INFO] [AbstractApplicationContext] - Closing Root WebApplicationContext: startup date [Mon Oct 30 22:11:07 CST 2017]; root of context hierarchy
+2017-10-30 22:13:28 - [INFO] [ContextLoader] - Root WebApplicationContext: initialization started
+2017-10-30 22:13:32 - [INFO] [AbstractApplicationContext] - Refreshing Root WebApplicationContext: startup date [Mon Oct 30 22:13:32 CST 2017]; root of context hierarchy
+2017-10-30 22:13:34 - [INFO] [AnnotationConfigWebApplicationContext] - Registering annotated classes: [class config.spring.SpringContextConfig]
+2017-10-30 22:13:34 - [INFO] [XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [config/spring/SpringContextConfig.xml]
+2017-10-30 22:13:34 - [INFO] [PropertiesLoaderSupport] - Loading properties file from class path resource [config/jdbc/jdbc.properties]
+2017-10-30 22:13:34 - [INFO] [DriverManagerDataSource] - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-30 22:13:35 - [INFO] [ContextLoader] - Root WebApplicationContext: initialization completed in 6513 ms
+2017-10-30 22:13:35 - [INFO] [FrameworkServlet] - FrameworkServlet 'dispatcher': initialization started
+2017-10-30 22:13:35 - [INFO] [AbstractApplicationContext] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Oct 30 22:13:35 CST 2017]; parent: Root WebApplicationContext
+2017-10-30 22:13:35 - [INFO] [AnnotationConfigWebApplicationContext] - Registering annotated classes: [class config.spring.SpringMVCConfig]
+2017-10-30 22:13:35 - [INFO] [XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [config/spring/SpringMVCconfig.xml]
+2017-10-30 22:13:36 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//123 || /home/123],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.home()
+2017-10-30 22:13:36 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//testTeacher || /home/testTeacher],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.testTeacher()
+2017-10-30 22:13:36 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//1233 || /home/1233],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.home2()
+2017-10-30 22:13:36 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//12333 || /home/12333],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.home3()
+2017-10-30 22:13:36 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//1234 || /home/1234],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.home4()
+2017-10-30 22:13:36 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//appCtxt || /home/appCtxt],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.queryAppContext()
+2017-10-30 22:13:36 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//testscope || /home/testscope],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.testScope()
+2017-10-30 22:13:36 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle/pathParam/{ppParam}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittlesPathParam(int,org.springframework.ui.Model)
+2017-10-30 22:13:36 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle/pathParam2/{showId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittlesPathParam2(int,org.springframework.ui.Model)
+2017-10-30 22:13:36 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittles(org.springframework.ui.Model)
+2017-10-30 22:13:36 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle/param],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittlesParam(int,org.springframework.ui.Model)
+2017-10-30 22:13:36 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle/param2],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittlesParam2(int,org.springframework.ui.Model)
+2017-10-30 22:13:36 - [INFO] [AbstractUrlHandlerMapping] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler]
+2017-10-30 22:13:36 - [INFO] [FrameworkServlet] - FrameworkServlet 'dispatcher': initialization completed in 835 ms
+2017-10-31 00:18:41 - [INFO] [AbstractApplicationContext] - Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Oct 30 22:13:35 CST 2017]; parent: Root WebApplicationContext
+2017-10-31 00:18:41 - [INFO] [AbstractApplicationContext] - Closing Root WebApplicationContext: startup date [Mon Oct 30 22:13:32 CST 2017]; root of context hierarchy
+2017-10-31 09:41:07 - [INFO] [ContextLoader] - Root WebApplicationContext: initialization started
+2017-10-31 09:41:08 - [INFO] [AbstractApplicationContext] - Refreshing Root WebApplicationContext: startup date [Tue Oct 31 09:41:08 CST 2017]; root of context hierarchy
+2017-10-31 09:41:08 - [INFO] [AnnotationConfigWebApplicationContext] - Registering annotated classes: [class config.spring.SpringContextConfig]
+2017-10-31 09:41:08 - [INFO] [XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [config/spring/SpringContextConfig.xml]
+2017-10-31 09:41:09 - [INFO] [PropertiesLoaderSupport] - Loading properties file from class path resource [config/jdbc/jdbc.properties]
+2017-10-31 09:41:09 - [INFO] [DriverManagerDataSource] - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-31 09:41:10 - [ERROR] [ContextLoader] - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'homeController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.tomas.web.service.HomeService com.tomas.web.controller.HomeController.homeService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.tomas.web.service.HomeService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:292)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4851)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5314)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:753)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:729)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.manageApp(HostConfig.java:1696)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:300)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at org.apache.catalina.mbeans.MBeanFactory.createStandardContext(MBeanFactory.java:484)
+	at org.apache.catalina.mbeans.MBeanFactory.createStandardContext(MBeanFactory.java:433)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:300)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:324)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:568)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:826)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:683)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:682)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.tomas.web.service.HomeService com.tomas.web.controller.HomeController.homeService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.tomas.web.service.HomeService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	... 58 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.tomas.web.service.HomeService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1103)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:963)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:858)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 60 more
+2017-10-31 09:42:07 - [INFO] [ContextLoader] - Root WebApplicationContext: initialization started
+2017-10-31 09:42:08 - [INFO] [AbstractApplicationContext] - Refreshing Root WebApplicationContext: startup date [Tue Oct 31 09:42:08 CST 2017]; root of context hierarchy
+2017-10-31 09:42:08 - [INFO] [AnnotationConfigWebApplicationContext] - Registering annotated classes: [class config.spring.SpringContextConfig]
+2017-10-31 09:42:08 - [INFO] [XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [config/spring/SpringContextConfig.xml]
+2017-10-31 09:42:09 - [INFO] [PropertiesLoaderSupport] - Loading properties file from class path resource [config/jdbc/jdbc.properties]
+2017-10-31 09:42:09 - [INFO] [DriverManagerDataSource] - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-31 09:42:10 - [INFO] [ContextLoader] - Root WebApplicationContext: initialization completed in 2446 ms
+2017-10-31 09:42:10 - [INFO] [FrameworkServlet] - FrameworkServlet 'dispatcher': initialization started
+2017-10-31 09:42:10 - [INFO] [AbstractApplicationContext] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Oct 31 09:42:10 CST 2017]; parent: Root WebApplicationContext
+2017-10-31 09:42:10 - [INFO] [AnnotationConfigWebApplicationContext] - Registering annotated classes: [class config.spring.SpringMVCConfig]
+2017-10-31 09:42:10 - [INFO] [XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [config/spring/SpringMVCconfig.xml]
+2017-10-31 09:42:11 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//123 || /home/123],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.home()
+2017-10-31 09:42:11 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//testTeacher || /home/testTeacher],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.testTeacher()
+2017-10-31 09:42:11 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//1233 || /home/1233],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.home2()
+2017-10-31 09:42:11 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//12333 || /home/12333],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.home3()
+2017-10-31 09:42:11 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//1234 || /home/1234],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.home4()
+2017-10-31 09:42:11 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//appCtxt || /home/appCtxt],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.queryAppContext()
+2017-10-31 09:42:11 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//testscope || /home/testscope],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.testScope()
+2017-10-31 09:42:11 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//userService || /home/userService],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.testUserService()
+2017-10-31 09:42:11 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//homeService || /home/homeService],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.testHomeService()
+2017-10-31 09:42:11 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle/param2],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittlesParam2(int,org.springframework.ui.Model)
+2017-10-31 09:42:11 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittles(org.springframework.ui.Model)
+2017-10-31 09:42:11 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle/param],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittlesParam(int,org.springframework.ui.Model)
+2017-10-31 09:42:11 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle/pathParam/{ppParam}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittlesPathParam(int,org.springframework.ui.Model)
+2017-10-31 09:42:11 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle/pathParam2/{showId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittlesPathParam2(int,org.springframework.ui.Model)
+2017-10-31 09:42:11 - [INFO] [AbstractUrlHandlerMapping] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler]
+2017-10-31 09:42:11 - [INFO] [FrameworkServlet] - FrameworkServlet 'dispatcher': initialization completed in 806 ms
+2017-10-31 09:43:31 - [INFO] [AbstractApplicationContext] - Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Oct 31 09:42:10 CST 2017]; parent: Root WebApplicationContext
+2017-10-31 09:43:31 - [INFO] [AbstractApplicationContext] - Closing Root WebApplicationContext: startup date [Tue Oct 31 09:42:08 CST 2017]; root of context hierarchy
+2017-10-31 09:47:08 - [INFO] [ContextLoader] - Root WebApplicationContext: initialization started
+2017-10-31 09:47:08 - [INFO] [AbstractApplicationContext] - Refreshing Root WebApplicationContext: startup date [Tue Oct 31 09:47:08 CST 2017]; root of context hierarchy
+2017-10-31 09:47:08 - [INFO] [AnnotationConfigWebApplicationContext] - Registering annotated classes: [class config.spring.SpringContextConfig]
+2017-10-31 09:47:08 - [INFO] [XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [config/spring/SpringContextConfig.xml]
+2017-10-31 09:47:09 - [INFO] [PropertiesLoaderSupport] - Loading properties file from class path resource [config/jdbc/jdbc.properties]
+2017-10-31 09:47:09 - [INFO] [DriverManagerDataSource] - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-31 09:47:10 - [INFO] [ContextLoader] - Root WebApplicationContext: initialization completed in 2130 ms
+2017-10-31 09:47:10 - [INFO] [FrameworkServlet] - FrameworkServlet 'dispatcher': initialization started
+2017-10-31 09:47:10 - [INFO] [AbstractApplicationContext] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Oct 31 09:47:10 CST 2017]; parent: Root WebApplicationContext
+2017-10-31 09:47:10 - [INFO] [AnnotationConfigWebApplicationContext] - Registering annotated classes: [class config.spring.SpringMVCConfig]
+2017-10-31 09:47:10 - [INFO] [XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [config/spring/SpringMVCconfig.xml]
+2017-10-31 09:47:10 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//123 || /home/123],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.home()
+2017-10-31 09:47:10 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//testTeacher || /home/testTeacher],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.testTeacher()
+2017-10-31 09:47:10 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//1233 || /home/1233],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.home2()
+2017-10-31 09:47:10 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//12333 || /home/12333],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.home3()
+2017-10-31 09:47:10 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//1234 || /home/1234],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.home4()
+2017-10-31 09:47:10 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//appCtxt || /home/appCtxt],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.queryAppContext()
+2017-10-31 09:47:10 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//testscope || /home/testscope],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.testScope()
+2017-10-31 09:47:10 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//userService || /home/userService],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.testUserService()
+2017-10-31 09:47:10 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[//homeService || /home/homeService],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.HomeController.testHomeService()
+2017-10-31 09:47:10 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle/param2],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittlesParam2(int,org.springframework.ui.Model)
+2017-10-31 09:47:10 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittles(org.springframework.ui.Model)
+2017-10-31 09:47:10 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle/param],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittlesParam(int,org.springframework.ui.Model)
+2017-10-31 09:47:10 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle/pathParam/{ppParam}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittlesPathParam(int,org.springframework.ui.Model)
+2017-10-31 09:47:10 - [INFO] [AbstractHandlerMethodMapping] - Mapped "{[/spittle/pathParam2/{showId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.tomas.web.controller.SpittleController.spittlesPathParam2(int,org.springframework.ui.Model)
+2017-10-31 09:47:10 - [INFO] [AbstractUrlHandlerMapping] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler]
+2017-10-31 09:47:11 - [INFO] [FrameworkServlet] - FrameworkServlet 'dispatcher': initialization completed in 867 ms
+2017-10-31 09:48:58 - [INFO] [AbstractApplicationContext] - Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Oct 31 09:47:10 CST 2017]; parent: Root WebApplicationContext
+2017-10-31 09:48:58 - [INFO] [AbstractApplicationContext] - Closing Root WebApplicationContext: startup date [Tue Oct 31 09:47:08 CST 2017]; root of context hierarchy

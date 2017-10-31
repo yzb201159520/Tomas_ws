@@ -12,7 +12,7 @@ SpringMVC小作文
 6.DispatcherServlet 将视图渲染然后返回回去。
 
 提问总结：
-3.Spring的机制，IOC和AOP，事务的声明，乐观锁悲观锁，脏数据。
+3.Spring的机制，IOC和AOP，事务的声明，乐观锁 ，脏数据。
 IOC和AOP见小作文。
 
 
