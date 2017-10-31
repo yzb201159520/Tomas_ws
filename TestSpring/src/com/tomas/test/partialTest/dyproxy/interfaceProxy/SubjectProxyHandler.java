@@ -12,7 +12,11 @@ public class SubjectProxyHandler implements InvocationHandler {
 	 * 被代理的真实对象存放处
 	 */
 	private Object proxied;
-	
+
+	/**
+	 * 这里其实也可以不同从外部获得这个proxy，改由自己生成一个，MyBatis的SqlSession就是这么由SqlSessionTemplate生成的。
+	 * @param proxied
+	 */
 	public SubjectProxyHandler(Object proxied) {
 		this.proxied = proxied;
 	}

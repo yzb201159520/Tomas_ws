@@ -14,7 +14,7 @@ SpringMVC小作文
 提问总结：
 3.Spring的机制，IOC和AOP，事务的声明，乐观锁 ，脏数据。
 IOC和AOP见小作文。
-
+见事务资料
 
 4.SpringMVC的一个请求的过程，Filter和InterCepter拦截器的区别。
 见SpringMVC小作文
